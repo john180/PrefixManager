@@ -1,0 +1,27 @@
+name: PrefixManager
+main: com.mcjtf.Prefix.Main
+author: john180
+version: 3.3.1
+depend: [Vault]
+commands:
+  prm:
+    usage: /prm
+    description: 设定称号.
+permissions:
+    prefixmanager.use:
+      description: 普通用户权限
+      children:
+        prefixmanager.list: true
+        prefixmanager.set: true
+        prefixmanager.check: true
+    prefixmanager.admin:
+      description: 管理权限
+      children:
+        prefixmanager.list.other: true
+        prefixmanager.add: true
+        prefixmanager.del: true
+        prefixmanager.save: true
+        prefixmanager.load: true
+        prefixmanager.gadd: true
+        prefixmanager.gdel: true
+        prefixmanager.glist: true
